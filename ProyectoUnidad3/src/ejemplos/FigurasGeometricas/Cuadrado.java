@@ -1,15 +1,19 @@
 package ejemplos.FigurasGeometricas;
 
-public class Cuadrado {
+public class Cuadrado extends FiguraGeometrica{
 	
 	private int lado;
 	
 	public Cuadrado() {
 		
+		this.tipoFigura=EnumFigura.POLIGONOS;
+		
 	}
 
 	public Cuadrado(int lado) {
+		this();
 		this.lado = lado;
+		
 	}
 
 	public int getLado() {
@@ -20,12 +24,14 @@ public class Cuadrado {
 		this.lado = lado;
 	}
 
+	@Override
 	public double calcularArea() {
 		
 		return lado*lado;
 	}
 	
-	public double calcularPerimetro() {
+	@Override
+	public double calcularPerímetro() {
 		
 		return lado*4;
 	}

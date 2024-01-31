@@ -1,14 +1,17 @@
 package ejemplos.FigurasGeometricas;
 
-public class Circulo {
+public class Circulo extends FiguraGeometrica{
 
 	private int radio;
 	
 	public Circulo(){
 		
+		this.tipoFigura=EnumFigura.ELIPSES;
+		
 	}
 
 	public Circulo(int radio) {
+		this();
 		this.radio = radio;
 	}
 
@@ -20,13 +23,14 @@ public class Circulo {
 		this.radio = radio;
 	}
 	
-	
+	@Override
 	public double calcularArea() {
 		
 		return 2*Math.PI*radio;
 	}
 	
-	public double calcularPerimetro () {
+	@Override
+	public double calcularPerímetro () {
 		
 		return Math.PI*radio*radio;
 	}

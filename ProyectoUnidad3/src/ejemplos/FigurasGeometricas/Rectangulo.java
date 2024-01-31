@@ -1,15 +1,17 @@
 package ejemplos.FigurasGeometricas;
 
-public class Rectangulo {
+public class Rectangulo extends FiguraGeometrica {
 	
 	private int base;
 	private int altura;
 	
 	public Rectangulo() {
 		
+		this.tipoFigura=EnumFigura.ELIPSES;		
 	}
 
 	public Rectangulo(int base, int altura) {
+		this();
 		this.base = base;
 		this.altura = altura;
 	}
@@ -30,12 +32,14 @@ public class Rectangulo {
 		this.altura = altura;
 	}
 
-	
-	public double calculaArea() {
+	@Override
+	public double calcularArea() {
 		
 		return base*altura;
 	}
 	
+	
+	@Override
 	public double calcularPerímetro() {
 		
 		return (base*2)+(altura*2);
