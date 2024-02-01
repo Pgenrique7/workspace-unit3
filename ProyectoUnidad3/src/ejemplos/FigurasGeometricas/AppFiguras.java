@@ -22,7 +22,7 @@ public class AppFiguras {
 	           cir2 = (Circulo) varSuperRectangulo;
 
 	       arrayFiguras[0] = cir;
-	       arrayFiguras[1] = new FiguraGeometrica();
+	       arrayFiguras[1] = new Cuadrado(5);
 	       arrayFiguras[2] = new Rectangulo(4, 8);
 	       arrayFiguras[3] = new Cuadrado(5);
 	       arrayFiguras[4] = new TriánguloRectángulo(3, 7);

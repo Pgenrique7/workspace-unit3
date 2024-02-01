@@ -1,25 +1,12 @@
 package ejemplos.FigurasGeometricas;
 
-public class FiguraGeometrica {
+public abstract class FiguraGeometrica {
 	
 	protected EnumFigura tipoFigura;
 	
+	public abstract double calcularArea();
 	
-	
-	public FiguraGeometrica() {
-		
-		tipoFigura=EnumFigura.FIGURA_GEOMETRICA;
-	}
-
-	public double calcularArea() {
-		
-		return 0.0;
-	}
-	
-	public double calcularPerímetro () {
-		
-		return 0.0;
-	}
+	public abstract double calcularPerímetro();
 		
 	public EnumFigura  getTipo() {
 		

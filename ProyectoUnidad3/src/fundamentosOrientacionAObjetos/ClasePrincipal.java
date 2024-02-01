@@ -6,7 +6,7 @@ public class ClasePrincipal {
 		
 		
 		Object obj =new Object();
-		Coche miCoche= new Coche();
+		Coche miCoche= new SUV("Rojo", "Ford", "Mondeo",25000,15000);
 		String s = new String("hola");
 		String s2="hola";
 		
@@ -15,7 +15,7 @@ public class ClasePrincipal {
 		//ATRIBUTOS PUBLICOS NO
 		
 		
-		Coche miTesla = new Coche("Rojo", "Tesla", "S");
+		Coche miTesla = new Sedan("Rojo", "Tesla", "S",25000,15000, 5);
 		miTesla.repintar("Amarillo"); 
 		
 		System.out.println(miTesla);
@@ -36,6 +36,12 @@ public class ClasePrincipal {
 		miCoche.setColor(miTesla.getColor());
 		
 		System.out.println(miCoche);
+		
+		System.out.println("Beneficios: "+miTesla.beneficios(0.18));
+		
+		SUV miTeslaSUV = new SUV ("Azul","Tesla","Model E", 35000, 30000);
+		
+		System.out.println("Mi SUV "+ miTeslaSUV);
 	}
 
 }
